@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imgKorea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/korea" />
+
+        <ImageView
+            android:id="@+id/imgCanada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/canada" />
+
+        <ImageView
+            android:id="@+id/imgFrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/france" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnKorea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Korea" />
+
+        <Button
+            android:id="@+id/btnCanada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canada" />
+
+        <Button
+            android:id="@+id/btnFrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="France" />
+
+    </LinearLayout>
+
+</LinearLayout>
