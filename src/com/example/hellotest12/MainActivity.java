@@ -2,7 +2,10 @@ package com.example.hellotest12;
 
 import android.app.Activity;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
@@ -25,6 +28,15 @@ public class MainActivity extends Activity {
 		builder.setSmallIcon(android.R.drawable.ic_input_delete);
 		builder.setContentTitle("내용타이틀");
 		builder.setContentText("내용입니다.");
+		
+		Intent intent = new Intent(getApplicationContext(), getClass());
+		TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+		stackBuilder.addParentStack(getClass());
+		stackBuilder.addNextIntent(intent);
+		PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+		builder.setContentIntent(resultPendingIntent);
+		builder.setAutoCancel(true);
+		
 		manager.notify(1, builder.build());
 	}
 }
