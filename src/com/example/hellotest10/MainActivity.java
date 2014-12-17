@@ -16,30 +16,14 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		// 데이터 저장
 		ArrayList<MyCustomDTO> list = new ArrayList<MyCustomDTO>();
-		list.add(new MyCustomDTO("canada", R.drawable.canada));
-		list.add(new MyCustomDTO("canada", R.drawable.canada));
-		list.add(new MyCustomDTO("canada", R.drawable.canada));
-		
-		list.add(new MyCustomDTO("france", R.drawable.france));
-		list.add(new MyCustomDTO("france", R.drawable.france));
-		list.add(new MyCustomDTO("france", R.drawable.france));
-		
-		list.add(new MyCustomDTO("korea", R.drawable.korea));
-		list.add(new MyCustomDTO("korea", R.drawable.korea));
-		list.add(new MyCustomDTO("korea", R.drawable.korea));
-		
-		list.add(new MyCustomDTO("mexico", R.drawable.mexico));
-		list.add(new MyCustomDTO("mexico", R.drawable.mexico));
-		list.add(new MyCustomDTO("mexico", R.drawable.mexico));
-		
-		list.add(new MyCustomDTO("canada", R.drawable.canada));
-		list.add(new MyCustomDTO("canada", R.drawable.canada));
-		list.add(new MyCustomDTO("canada", R.drawable.canada));
-		
-		list.add(new MyCustomDTO("poland", R.drawable.poland));
-		list.add(new MyCustomDTO("poland", R.drawable.poland));
-		list.add(new MyCustomDTO("poland", R.drawable.poland));
-		
+		for(int i=0;i<=2;i++) {
+			list.add(new MyCustomDTO("canada", R.drawable.canada));
+			list.add(new MyCustomDTO("france", R.drawable.france));
+			list.add(new MyCustomDTO("korea", R.drawable.korea));
+			list.add(new MyCustomDTO("mexico", R.drawable.mexico));
+			list.add(new MyCustomDTO("canada", R.drawable.canada));
+			list.add(new MyCustomDTO("poland", R.drawable.poland));
+		}
 		// GridView 객체 생성
 		GridView gridView = (GridView)findViewById(R.id.gridView1);
 		// Adapter 적용

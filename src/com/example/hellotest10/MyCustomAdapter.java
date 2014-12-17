@@ -49,7 +49,5 @@ public class MyCustomAdapter extends BaseAdapter {
 		name.setText(dto.getName());
 		imgPhoto.setImageResource(dto.getImgPhoto());
 		return convertView;
-	}
-	
-	
+	}	
 }
