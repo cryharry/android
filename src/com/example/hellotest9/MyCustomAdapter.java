@@ -46,11 +46,11 @@ public class MyCustomAdapter extends BaseAdapter {
 		TextView txtTitle = (TextView)convertView.findViewById(R.id.txtTitle);
 		TextView txtContent = (TextView)convertView.findViewById(R.id.txtContent);
 		ImageView imgIcon = (ImageView)convertView.findViewById(R.id.imgIcon);
-		MyCustomDTO dtd = list.get(position);
+		MyCustomDTO dto = list.get(position);
 		
-		txtTitle.setText(dtd.getTitle());
-		txtContent.setText(dtd.getContent());
-		imgIcon.setImageResource(dtd.getImgIcon());
+		txtTitle.setText(dto.getTitle());
+		txtContent.setText(dto.getContent());
+		imgIcon.setImageResource(dto.getImgIcon());
 		return convertView;
 	}
 	
